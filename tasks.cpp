@@ -12,14 +12,14 @@ private:
     CDLLNode* head;
 
 public:
-    CircularDoublyLinkedList() : head(nullptr) {}
+    CircularDoublyLinkedList() : head(NULL) {}
 
     bool isEmpty() {
-        return head == nullptr;
+        return head == NULL;
     }
 
     void insertAtBeginning(int data) {
-        CDLLNode* newNode = new CDLLNode{data, nullptr, nullptr};
+        CDLLNode* newNode = new CDLLNode{data, NULL, NULL};
         if (!head) {
             newNode->next = newNode->prev = newNode;
             head = newNode;
@@ -35,7 +35,7 @@ public:
     }
 
     void append(int data) {
-        CDLLNode* newNode = new CDLLNode{data, nullptr, nullptr};
+        CDLLNode* newNode = new CDLLNode{data, NULL, NULL};
         if (!head) {
             newNode->next = newNode->prev = newNode;
             head = newNode;
@@ -51,7 +51,7 @@ public:
 
     void display() {
         if (!head) {
-            cout << "List is empty" << endl;
+            cout << "empty" << endl;
             return;
         }
 
@@ -60,7 +60,7 @@ public:
             cout << temp->data << " <-> ";
             temp = temp->next;
         } while (temp != head);
-        cout << "(head)" << endl;
+        cout << "head" << endl;
     }
 
     int count() {
