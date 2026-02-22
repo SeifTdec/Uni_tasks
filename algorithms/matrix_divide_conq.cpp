@@ -2,7 +2,7 @@
 #include <vector>
 
 using Matrix = std::vector<std::vector<double>>;
-
+// T(n) = 8·T(n/2) + O(n²)
 // Helper: Add two matrices
 Matrix add(const Matrix& A, const Matrix& B) {
     int n = A.size(), m = A[0].size();
